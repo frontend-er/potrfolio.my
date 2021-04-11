@@ -6,13 +6,12 @@ var preview = document.getElementById("preview-prew");
 var holder = document.getElementById('holder');
 
 
-
-
 btn.addEventListener("click", function () { ChangeTheme(); });
 
 
 function ChangeTheme()
 {
+   
     bg.classList.toggle('light');
     btn.classList.toggle('light-btn');
     list.classList.toggle('link-light');
@@ -21,5 +20,12 @@ function ChangeTheme()
     holder.classList.toggle('light-prev-text');
 }
 
+//Burger//
 
 
+$(document).ready(function() {
+    $('.menu__icon').click(function(event) {
+        $('.menu__icon, .menu__body').toggleClass('active');
+        $('body').toggleClass('lock');
+    })
+});

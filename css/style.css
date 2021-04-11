@@ -26,20 +26,26 @@
   box-sizing: border-box;
 }
 
+.menu__icon {
+  display: none;
+}
+
+.menu__prev {
+  display: none;
+  z-index: 100;
+}
+
 ._container {
   max-width: 1680px;
   margin: 0 auto;
 }
 
-body {
-  margin: -20px;
-  overflow: hidden;
-}
-
 .header-head {
+  margin: -8px;
   overflow: hidden;
   background-color: #1c1d25;
   transition: all ease 0.5s;
+  overflow: hidden;
 }
 
 .light {
@@ -69,6 +75,7 @@ body {
   height: 99px;
   width: 80px;
   margin-left: 20px;
+  z-index: 100;
 }
 
 .header__button {
@@ -115,6 +122,7 @@ body {
   background: url(../img/Header/switch-button-defoalt.png) 0 0 no-repeat;
   width: 46px;
   height: 25px;
+  margin-bottom: 10px;
 }
 
 .light-btn {
@@ -124,6 +132,7 @@ body {
 }
 
 .preview-prew {
+  margin: -8px;
   background-color: #1c1d25;
   display: flex;
   justify-content: space-between;
@@ -176,11 +185,16 @@ body {
 .preview__footer {
   margin-top: 100px;
   margin-left: 350px;
+  cursor: pointer;
   max-width: 22px;
   width: 100%;
   max-height: 67px;
   height: 100%;
   margin-top: 100px;
+}
+
+.preview__footer a {
+  text-decoration: none;
 }
 
 .preview__footer span {
@@ -227,6 +241,11 @@ body {
   font-family: 'Carter One', 'cursive';
   align-items: center;
   font-size: 27px;
+  cursor: pointer;
+}
+
+.button-web__container {
+  display: flex;
 }
 
 .button-web__body {
@@ -238,6 +257,12 @@ body {
 
 .button-web__arrow {
   margin-left: -20px;
+  padding-top: 15px;
+}
+
+.button-web :hover img {
+  margin-left: 16px;
+  transition: all ease 0.5s;
 }
 
 @media (min-width: 989.98px) {
@@ -289,28 +314,113 @@ body {
 }
 
 @media (max-width: 989.98px) {
-  .header-head {
-    width: 100%;
+  .menu__prev {
+    display: block;
+  }
+
+  .menu__prev .preview__links {
+    display: block;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .menu__icon {
+    margin-right: 20px;
+    display: block;
+    position: relative;
+    height: 20px;
+    z-index: 3;
+  }
+
+  .menu__icon.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .menu__icon.active:after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+
+  .menu__icon.active span {
+    transform: scale(0);
   }
 
   .menu__list {
-    display: none;
+    margin-top: 50px;
+    display: block;
+  }
+
+  .menu__icon span {
+    position: absolute;
+    background-color: #9698a1;
+    left: 0;
+    width: 100%;
+    width: 30px;
+    height: 2px;
+    top: 9px;
+    transition: all ease 0.4s;
+  }
+
+  .menu__icon:before,
+  .menu__icon:after {
+    content: '';
+    background-color: #9698a1;
+    position: absolute;
+    width: 100%;
+    width: 30px;
+    height: 2px;
+    left: 0;
+    transition: all ease 0.4s;
+  }
+
+  .menu__icon::before {
+    top: 0;
+  }
+
+  .menu__icon:after {
+    bottom: 0;
+  }
+
+  .menu__body {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: -10000px;
+    height: 100%;
+    width: 100%;
+    background-color: #535565;
+    padding: 100px 50px 20px 50px;
+    transition: all ease 0.8s;
+  }
+
+  .menu__body.active {
+    right: 0;
+    transition: all ease 0.8s;
+  }
+
+  .header__logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 45px;
+    width: 36px;
+    background: url(../img/Header/LOGO-mini.png) 0 0 no-repeat;
   }
 
   .menu__link {
-    font-size: 14px;
+    padding-left: 30px;
+    font-size: 30px;
   }
 
   .theme_changer {
     display: none;
   }
 
-  .preview-prew {
-    width: 100%;
-  }
-
   .preview__body {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-left: 20px;
     margin-right: -200px;
     width: 166px;
@@ -349,19 +459,26 @@ body {
     height: 35px;
     padding: 7px 10px 7px 10px;
   }
+
+  .button-web__arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 989.98px) and (max-width: 456px) {
+  .menu__body {
+    display: block;
+  }
+
+  .menu__body .preview__links {
+    padding-top: 40px;
+    display: flex;
+  }
 }
 
 @media (max-width: 771.98px) {
   ._container {
     padding: 0 10px;
-  }
-
-  .header__logo {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 45px;
-    width: 36px;
-    background: url(../img/Header/LOGO-mini.png) 0 0 no-repeat;
   }
 
   .preview__body {
@@ -386,9 +503,5 @@ body {
     width: 70px;
     height: 30px;
     padding: 7px 10px 7px 10px;
-  }
-
-  .button-web__arrow {
-    display: none;
   }
 }
