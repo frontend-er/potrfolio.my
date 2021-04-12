@@ -103,9 +103,26 @@ $(document).ready(function(){
   //========================slider=================================//
 
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 20,
+ 
     pagination: {
       clickable: true,
     },
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1300: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1600: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+    }
   });
