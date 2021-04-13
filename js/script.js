@@ -76,6 +76,9 @@ function logMouseOver3() {
     hover3.classList.add('hover-display3');
 }
 
+
+
+
 let hover4 = document.getElementById("hover4");
 
 
@@ -122,7 +125,17 @@ $(document).ready(function(){
         },
         1600: {
             slidesPerView: 4,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
     }
   });
+
+
+let hover5 = document.getElementById("mac");
+let test5 = document.getElementById("skills");
+test5.onmouseover = logMouseOver5;
+
+function logMouseOver5() {
+    hover5.classList.add('hover-skills');
+
+}
