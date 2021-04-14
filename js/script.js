@@ -91,10 +91,14 @@ test4.onmouseover = logMouseOver4;
 function logMouseOver4() {
     hover4.classList.add('hover-display4');
 }
+document.getElementById("mybutton").click();
+
 
 //========================react===============================//
 $(document).ready(function(){
+    $(".btn1").focus();
     $(".btn1").click(function(){
+
       $(".react-react").slideUp();
     });
     $(".btn2").click(function(){
@@ -102,6 +106,7 @@ $(document).ready(function(){
     });
   });
 
+ 
 
   //========================slider=================================//
 
