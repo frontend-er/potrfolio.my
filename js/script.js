@@ -11,22 +11,22 @@ btn.addEventListener("click", function () { ChangeTheme(); });
 
 function ChangeTheme() {
 
-    bg.classList.toggle('light');
-    btn.classList.toggle('light-btn');
-    list.classList.toggle('link-light');
-    logo.classList.toggle('light-logo');
-    preview.classList.toggle('light-prev');
-    holder.classList.toggle('light-prev-text');
+  bg.classList.toggle('light');
+  btn.classList.toggle('light-btn');
+  list.classList.toggle('link-light');
+  logo.classList.toggle('light-logo');
+  preview.classList.toggle('light-prev');
+  holder.classList.toggle('light-prev-text');
 }
 
 //Burger//
 
 
 $(document).ready(function () {
-    $('.menu__icon').click(function (event) {
-        $('.menu__icon, .menu__body').toggleClass('active');
-        $('body').toggleClass('lock');
-    })
+  $('.menu__icon').click(function (event) {
+    $('.menu__icon, .menu__body').toggleClass('active');
+    $('body').toggleClass('lock');
+  })
 });
 
 //===============works========///
@@ -41,7 +41,7 @@ let test = document.getElementById("work1");
 test.onmouseover = logMouseOver;
 
 function logMouseOver() {
-    hover.classList.add('hover-display');
+  hover.classList.add('hover-display');
 }
 
 
@@ -57,7 +57,7 @@ let test2 = document.getElementById("work2");
 test2.onmouseover = logMouseOver2;
 
 function logMouseOver2() {
-    hover2.classList.add('hover-display2');
+  hover2.classList.add('hover-display2');
 }
 
 
@@ -73,7 +73,7 @@ let test3 = document.getElementById("work3");
 test3.onmouseover = logMouseOver3;
 
 function logMouseOver3() {
-    hover3.classList.add('hover-display3');
+  hover3.classList.add('hover-display3');
 }
 
 
@@ -89,49 +89,38 @@ let test4 = document.getElementById("work4");
 test4.onmouseover = logMouseOver4;
 
 function logMouseOver4() {
-    hover4.classList.add('hover-display4');
+  hover4.classList.add('hover-display4');
 }
-document.getElementById("mybutton").click();
 
 
-//========================react===============================//
-$(document).ready(function(){
-    $(".btn1").click(function(){
-      $(".react-react").slideUp();
-    });
-    $(".btn2").click(function(){
-      $(".react-react").slideDown();
-    });
-  });
 
- 
 
-  //========================slider=================================//
+//========================slider=================================//
 
-  var swiper = new Swiper('.swiper-container', {
- 
-    pagination: {
-      clickable: true,
+var swiper = new Swiper('.swiper-container', {
+
+  pagination: {
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
-    breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1300: {
-          slidesPerView: 4,
-          spaceBetween: 10,
-        },
-        1600: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-    }
-  });
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1300: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  }
+});
 
 
 let hover5 = document.getElementById("mac");
@@ -139,6 +128,35 @@ let test5 = document.getElementById("skills");
 test5.onmouseover = logMouseOver5;
 
 function logMouseOver5() {
-    hover5.classList.add('hover-skills');
+  hover5.classList.add('hover-skills');
 
 }
+
+
+let hover6 = document.getElementById("hover6");
+
+
+
+// This handler will be executed only once when the cursor
+// moves over the unordered list
+let test6 = document.getElementById("work6");
+test6.onmouseover = logMouseOver6;
+
+function logMouseOver6() {
+  hover6.classList.add('hover-display6');
+}
+
+
+
+
+$(document).ready(function () {
+  // плавное перемещение страницы к нужному блоку
+  $("nav li a").click(function () {
+    elementClick = $(this).attr("href");
+    destination = $(elementClick).offset().top;
+    $("body,html").animate({ scrollTop: destination }, 1600);
+  });
+});
+
+
+

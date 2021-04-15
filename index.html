@@ -25,12 +25,12 @@
                     <span></span>
                 </div>
                 <div class="menu__body">
-                    <div class="menu__list nav" id='menu__link'>
-                        <li><a href="" class="menu__link">Works</a></li>
-                        <li><a class="menu__link ">About me</a></li>
+                    <nav class="menu__list nav" id='menu__link'>
+                        <li><a href="#about" class="menu__link ">About me</a></li>
+                        <li><a href="#works" class="menu__link clickedelement">Works</a></li>
                         <li><a href="#openModal" class="menu__link">Contacts</a></li>
 
-                    </div>
+                    </nav>
                     <div class="menu__prev">
                         <div class="preview__links">
                             <div class="preview__git">
@@ -56,6 +56,13 @@
     </div>
 </div>
 
+   
+
+
+
+
+
+
     <div class="preview-prew" id="preview-prew">
         <div class="preview__content _container">
             <div class="preview__body">
@@ -80,11 +87,14 @@
                 </div>
             </div>
             <div class="preview__footer">
-                <a href="" id="works"><span>Works</span>
+                <a href=""><span>Works</span>
                     <img src="img/Preview/down-arrow.png" alt=""></a>
 
             </div>
         </div>
+
+
+
 
         <div class="preview__links">
             <div class="preview__git">
@@ -102,16 +112,74 @@
 
     </div>
 
+
+
+    
+    <div class="about-me">
+        <div class="about__content _container" id="about">
+            <div class="about__top">
+                <div class="about__photo">
+                    <img src="img/About/ME animodji.png" alt="">
+                    <br>
+                    Hi, I’m Dima 
+                </div>
+                <div class="about__info">
+                    <span>Bulding</span>  digital  <br>
+                    products, applications,  landing <br> pages and expirence.
+                </div>
+                <div class="about__infotmation">
+                    <i>a  <b>Web Developer</b>  and  <b>Visual Developer</b>.  <br>
+                        I specialize on modern pages for <br>
+                        <b>Your Bussines</b> .</i> 
+                </div>
+            </div>
+            <div class="about__bot" >
+                <div class="about__talk" id="aside1">
+                    <div class="talk-an">
+                        <img src="img/About/animodji-happy.png" alt="">
+                        <span>
+                            Got a progect?
+                            <br>
+                            <nav>Let’s Talk!</nav> 
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="about__contacts">
+                    <div class="about__email">
+                        <a href="mailto:dbjenov@gmail.com">dbjenov@gmail.com</a> 
+                    </div>
+                    <div class="about__phone">
+                         <a href="tel:37379053954">+373 79 05 39 54</a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
     <div class="works-work">
         <div class="works__content _container">
             <div class="works__body">
-                <div class="works__head">
+                <div class="works__head" id="works">
                     <div class="works__subtitle">
                         Case Studies
                     </div>
                     <div class="works__title">
-                        Latest Works
+                       Latest Works
+
                     </div>
+
                 </div>
 
                 <div class="works__row row-works">
@@ -239,75 +307,43 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="works__question">
-                <div class="works__subtitle2">
-                    Do you like PIZZA?
-                </div>
-                <div class="works__title2">
-                    React.js-pizza is better!
-                </div>
-                <button class="btn2 _container">YES</button>
-
-                <button type="button" id="mybutton" class="btn1 _container">NO</button>
-            </div>
-        </div>
-
-    </div>
-    <div class="react-react">
-        <div class="react__content _container">
-            <div class="react__body">
-                <div class="react__head">
-
-                    <a href="https://github.com/frontend-er/React-pizza">
-                        <div class="react__title">
-                            REACT.js DEVELOPMENT
-                        </div>
-                    </a>
-                </div>
-                <div class="react__slider">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-1.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-2.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-3.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-4.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-5.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-1.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-2.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-3.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-4.jpg.png"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img class="pizza" src="img/React-pizza-bg/Pizza-5.jpg.png"
-                                    alt=""></div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
+                <div class="works__row row-works6">
+                    <div class="row-works6__hover" id="hover6">
+                        # 05
                     </div>
-                </div>
-                <div class="react__button button-web">
-                    <div class="button-web__container">
+                    <div class="row-works6__body" id="work6">
                         <a href="https://github.com/frontend-er/React-pizza">
-                            <div class="button-web__body-pizza">
-                                See Web
+
+                            <div class="row-works6__title">
+                                PIZZA DELIVERY
                             </div>
                         </a>
+                        <div class="row-works6__subtitle">
+                            React.js application for dilivery
+                        </div>
+                        <div class="row-works6__button button-web">
+                            <a href="https://github.com/frontend-er/React-pizza">
+                                <div class="button-web__container">
+                                    <div class="button-web__body">
+                                        See Web
+                                    </div>
+                                    <div class="button-web__arrow">
+                                        <img src="img/Preview/right-arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
 
+
+                        </div>
                     </div>
-
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 
 
 
@@ -366,7 +402,7 @@
                 <div class="footer__foot foot-f">
                     <div class="foot-f__row">
 
-                        <span> <a href="">Contact</a> </span>
+                        <span> <a href="#openModal" >Contacts</a> </span>
                         <img src="img/Footer/LOGO-footer.png" alt="">
                         <span> <a href="https://github.com/frontend-er">GitHub</a> </span>
                     </div>
@@ -421,7 +457,7 @@
                             </div>
                         </div>
                         <div class="modal__button">
-                            <button>See the works</button>
+                            <button> <a href="https://github.com/frontend-er"> See the works</a>  </button>
                         </div>
                     </div>
                 </div>
